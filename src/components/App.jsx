@@ -14,7 +14,7 @@ export const App = () => {
   const [filter, setFilter] = useState('');
   useEffect(() => {
     localStorage.setItem(Key_Contacts, JSON.stringify(data));
-    console.log('dd', data);
+    // console.log('dd', data);
   }, [data]);
 
   const handleFilterChange = e => setFilter(e.target.value);
@@ -32,7 +32,7 @@ export const App = () => {
     }
     const newContact = { id: nanoid(), name, number };
     setData(prevState => [...prevState, newContact]);
-    console.log('ddch', data);
+    // console.log('ddch', data);
   };
 
   const filteredContacts = data.filter(contact =>
